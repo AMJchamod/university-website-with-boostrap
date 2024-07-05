@@ -1,39 +1,54 @@
- // Manually initialize the carousel with JavaScript
- document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
+    // Bootstrap Carousel Initialization
     var introCarousel = new bootstrap.Carousel(document.getElementById('introCarousel'), {
       interval: 2000,
       ride: 'carousel'
     });
-  });
-
-
-   
-var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints:{
+  
+    // Swiper Carousel Initialization
+    var swiper = new Swiper(".slide-content", {
+      slidesPerView: 3,
+      spaceBetween: 25,
+      loop: true,
+      centerSlide: 'true',
+      fade: 'true',
+      grabCursor: 'true',
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
         0: {
-            slidesPerView: 1,
+          slidesPerView: 1,
         },
         520: {
-            slidesPerView: 2,
+          slidesPerView: 2,
         },
         950: {
-            slidesPerView: 3,
+          slidesPerView: 3,
         },
-    },
+      },
+    });
+  
+    // Courses Submenu Trigger
+    document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function (element) {
+      element.addEventListener('click', function (e) {
+        e.preventDefault();
+        let nextEl = this.nextElementSibling;
+        if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+          if (nextEl.style.display === 'block') {
+            nextEl.style.display = 'none';
+          } else {
+            nextEl.style.display = 'block';
+          }
+        }
+      });
+    });
   });
+  // contact us
+  feather.replace();  
