@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Bootstrap Carousel Initialization
     var introCarousel = new bootstrap.Carousel(document.getElementById('introCarousel'), {
-      interval: 2000,
+      interval: 1900,
       ride: 'carousel'
     });
   
@@ -52,3 +52,22 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   // contact us
   feather.replace();  
+
+  //hidden application
+  function loadForm() {
+    fetch('application.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('form-container').innerHTML = data;
+        });
+}
+
+function openForm() {
+    document.getElementById("applyForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("applyForm").style.display = "none";
+}
+
+window.onload = loadForm;

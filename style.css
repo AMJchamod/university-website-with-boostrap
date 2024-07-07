@@ -3,9 +3,13 @@
     padding: 0;
     margin: 0;
 }
-.name{
+.logoname{
     font-family:"Trirong, serif" ;
-    font-size: medium;
+    color: white;
+ 
+}
+.aboutheading {
+  color: black;
 }
 .mx-5 {
     margin-left: 12rem;
@@ -79,26 +83,31 @@
  }
 
  .carousel-item:nth-child(1) {
-   background-image: url('https://th.bing.com/th/id/OIP.DijCzA399qo89alMZqdB_wAAAA?pid=ImgDet&w=139&h=78.1875&c=7&dpr=1.3');
-   background-repeat: no-repeat;
+   background-image: url('img/IMG_5242\ \(1\).JPG');
+   background-repeat: no-repeat;  
    background-size: cover;
    background-position: center center;
  }
 
  .carousel-item:nth-child(2) {
-   background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+   background-image: url('img/Green\ Modern\ Online\ Business\ Webinar\ Banner.png');
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center center;
  }
 
  .carousel-item:nth-child(3) {
-   background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+   background-image: url('img/Green\ White\ Orange\ Modern\ Geometric\ Online\ Training\ Banner\ \(1\).png');
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center center;
  }
-
+ .carousel-item:nth-child(4) {
+  background-image: url('img/Basic\ English\ Class\ Banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
  /* Height for devices larger than 576px */
  @media (min-width: 992px) {
    #introCarousel {
@@ -265,7 +274,7 @@
 }
 /*testmonial*/
 a:link,a:active,a:visited,a:hover{
-	color:#3f51b5;
+	color:#F1F1F1);
 }
 
 .outerdiv
@@ -589,10 +598,40 @@ a img {
 a img:hover {
     transform: scale(1.1);
 }
-.icon{
+/*deploma cards*/
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
-position: absolute;
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-
-    
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+/*footer logo*/
+.footerlogo{
+  height: 40vh;
+  width: 40vh;
+}
+/*about us card image*/
+.custom-card-img {
+  height: 400px; /* Adjust the height as per your requirement */
+  object-fit: cover; /* Ensures the image covers the entire space without stretching */
+}
+section {
+  margin-bottom: 200px; /* Adjust this value as needed */
+}
+.mordetaisfooter{
+  margin-bottom: 2000px;
+}
+/*firstdeploma  moredtails page section*/
+.firstitcourse{
+  margin-top: 150px;
+}
+.moredtatilstopic{
+  font-family: serif;
 }
