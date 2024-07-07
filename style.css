@@ -622,7 +622,7 @@ a img:hover {
   height: 400px; /* Adjust the height as per your requirement */
   object-fit: cover; /* Ensures the image covers the entire space without stretching */
 }
-section {
+.custmsection {
   margin-bottom: 200px; /* Adjust this value as needed */
 }
 .mordetaisfooter{
